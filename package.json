@@ -1,0 +1,28 @@
+{
+  "name": "hastebin-clone",
+  "version": "1.0.0",
+  "description": "web dev simplified",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumit134coder/hastebin-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sumit134coder/hastebin-clone/issues"
+  },
+  "homepage": "https://github.com/Sumit134coder/hastebin-clone#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4"
+  }
+}
