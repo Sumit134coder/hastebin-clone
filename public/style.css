@@ -1,4 +1,33 @@
 body{
     height: 100vh;
-    background-color:#002b3a;;
+    background-color:#002b36;
+    margin: 0;
 }
+.wrapper{
+    display: flex;
+    padding: 1rem .5rem;
+    font-size: 1rem;
+}
+pre{
+    margin: 0;
+}
+#code-display {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+.line-number {
+    color: #7D7D7D;
+    font-family: monospace;
+    text-align: end;
+  }
+  textarea {
+    background-color: transparent;
+    resize: none;
+    width: 100%;
+    padding: 0;
+    margin-left: 1rem;
+    color: #7D7D7D;
+    min-height: calc(100vh - 2rem);
+    border: none;
+    outline: none;
+  }

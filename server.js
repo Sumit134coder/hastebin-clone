@@ -8,12 +8,12 @@ app.set("view engine","ejs")
 
 app.get("/",(req,res)=>{
     const code = `This is the code now on you can add whatecer you want \nhello
-    now whahrk adjdfsf`
+now whahrk adjdfsf`
     res.render('code-display' , {code})
 })
 
 app.get("/new",(req,res)=>{
-    res.send("new page")
+    res.render('new')
 })
 
 app.listen(PORT , ()=>{
