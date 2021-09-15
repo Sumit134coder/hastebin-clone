@@ -31,6 +31,18 @@ app.post("/save" , async(req,res)=>{
     }
 })
 
+app.get("/:id/duplicate" , async(req,res)=>{
+    const id = req.params.id;
+    try{
+        const document = await Document.findById(id)
+        res.render("new", {value:document.value})
+    }catch(e){
+        res.redirect(`/${id}`)
+
+    }
+})
+
+
 app.listen(PORT , ()=>{
     console.log(`server started at localhost:${PORT}`)
 })
