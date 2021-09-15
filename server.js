@@ -9,7 +9,10 @@ app.use(express.urlencoded({ extended: true }))
 //model middleware
 const Document= require("./models/Document")
 const mongoose = require("mongoose")
-mongoose.connect()
+mongoose.connect("mongodb+srv://<username>:<password>@cluster0.p22zb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{ useUnifiedTopology: true,
+useNewUrlParser: true,},()=>{
+    console.log("database connected")
+})
 
 app.get("/",(req,res)=>{
     const code = `Welcome to YourBin`
@@ -38,6 +41,17 @@ app.get("/:id/duplicate" , async(req,res)=>{
         res.render("new", {value:document.value})
     }catch(e){
         res.redirect(`/${id}`)
+
+    }
+})
+
+app.get("/:id" , async (req,res)=>{
+    const id = req.params.id;
+    try{
+        const document =await Document.findById(id)
+        res.render("code-display" , {code:document.value , id})
+    }catch(e){
+        res.redirect("/")
 
     }
 })
